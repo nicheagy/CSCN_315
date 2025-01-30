@@ -49,6 +49,27 @@ body{
     background-color: black;
 }
 
+input[type="text"]:hover{
+    border-color: red;
+    border-style: dashed;
+}
+
+button[type="submit"]:hover{
+    border-color: red;
+    border-style: dashed;
+    background-color: grey;
+    color: red;
+}
+
+/*ID based styles*/
+#first_name{
+    background-color: grey;
+}
+
+#last_name{
+    background-color: grey;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     body {
