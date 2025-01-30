@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline and Embedded CSS Styles</title>
+    <!-- Embedded CSS: These styles will apply globally to the page unless overridden -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #2a9df4;
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .highlight {
+            background-color: #ffeb3b;
+            padding: 5px;
+        }
+        .container {
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Messing Around with Inline and Embedded CSS Styles</h1>
+
+        <!-- Inline style: This style will override the embedded styles for this paragraph -->
+        <p style="color: red; font-weight: bold;">
+            This paragraph uses inline CSS to apply a red color and bold font. It overrides the embedded styles.
+        </p>
+
+        <!-- Using embedded styles: The class "highlight" applies the yellow background defined in the embedded CSS -->
+        <p class="highlight">
+            This paragraph is styled using embedded CSS. It highlights the text with a yellow background.
+        </p>
+
+        <!-- Inline and embedded combination: Inline styles take precedence over embedded styles -->
+        <p class="highlight" style="color: green; text-decoration: underline;">
+            This paragraph uses both embedded and inline CSS. The inline styles (green text and underline) override the embedded styles.
+        </p>
+
+        <p>
+            To go back to the main page, click here->
+            <a href="index.html">MAIN</a>
+        </p>
+    </div>
+</body>
+</html>
