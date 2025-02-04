@@ -5,7 +5,10 @@
 <title>CSCN 315</title> <!--This is the name of the page, you will find it on the tab just above the search bar-->
     <style>
         body{text-align: center;}
-    </style><!--This is to center the content of the page-->
+        .highlight{color:red;font-weight: bold;}
+    </style>
+    <!--Top style is to keep the text on the page centered-->
+    <!--Bottom style is the implement of JavaScript Styling-->
     <meta name ="viewport" content="dieth-device-width, initial-scale=1.0"> <!--This is for the start of a responsive page-->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -26,5 +29,25 @@
         <h2>Here Is My Idea For My Website</h2>
         <p>I am planning on building a website for my brother who has a business called Helm and Port</p>
     </div>
+
+    <!--This is for the JavaScript Script Tags-->
+    <h1 id="example">JavaScript Example</h1>
+    <button onclick="showAlert()">Click Me</button>
+
+    <script>
+        // Use of a variable
+        var message = "Welcome to JavaScript!";
+
+        // Use getElementById() method to access an element
+        var exampleElement = document.getElementById("example");
+
+        // Use of JS styling
+        exampleElement.classList.add("highlight");
+
+        // Function to show an alert window when the button is clicked
+        function showAlert() {
+            alert(message);
+        }
+    </script>
 </body>
 </html>
