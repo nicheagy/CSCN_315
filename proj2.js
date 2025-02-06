@@ -31,7 +31,7 @@ document.getElementById('userData').addEventListener('submit', function(event) {
 
     // Additional fun interaction: Inspirational message
     const inspirationalMessages = [
-        '"I can do all things through Christ who strengthens me" Philipians 4:13'
+        '"I can do all things through Christ who strengthens me" -Philipians 4:13'
     ];
     const randomMessage = inspirationalMessages[Math.floor(Math.random() * inspirationalMessages.length)];
     resultDiv.innerHTML += `<br><br>${randomMessage}`;
