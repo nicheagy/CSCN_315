@@ -22,7 +22,7 @@ document.getElementById('userData').addEventListener('submit', function(event) {
     const greetingMessage = `Hello ${firstName} ${lastName}! Did you know you're approximately ${ageInMonths} months old? You were born around ${birthYear}.`;
 
     // Update result on the web page
-    const resultDiv = document.getElementById('result');
+    const resultDiv = document.getElementById('results');
     resultDiv.textContent = greetingMessage;
 
     // Log data to the console
