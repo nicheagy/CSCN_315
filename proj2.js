@@ -23,7 +23,7 @@ document.getElementById('userData').addEventListener('submit', function(event) {
 
     // Update result on the web page
     const resultDiv = document.getElementById('results');
-    resultDiv.textContent = greetingMessage;
+    resultDiv.textContent = greetingMessage|| "Welcome! Thank you for your submission";
 
     // Log data to the console
     console.log('User Input:', { firstName, lastName, age });
