@@ -53,6 +53,10 @@ input[type="text"]:hover{
     border-color: red;
     border-style: dashed;
 }
+button[type="submit"]{
+    background-color: white;
+    color: black;
+}
 
 button[type="submit"]:hover{
     border-color: red;
@@ -67,6 +71,10 @@ button[type="submit"]:hover{
 }
 
 #last_name{
+    background-color: grey;
+}
+
+#age{
     background-color: grey;
 }
 
