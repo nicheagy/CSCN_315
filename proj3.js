@@ -25,8 +25,11 @@ function processData(arr) {
     outputDiv.style.textAlign = 'center';
     outputDiv.style.marginTop = '20px';
   
-    // Generating the rundown of games
+    // Adding the key
     let content = '';
+    content += '<p><span style="color: green;">Green = Win</span> | <span style="color: red;">Red = Loss</span></p>';
+
+    // Generating the rundown of games
     content += '<ul style="list-style-type: none;">';
     for (let i = 0; i < arr.length; i++) {
       let color;
@@ -36,6 +39,8 @@ function processData(arr) {
       } else {
         color = 'red';
       }
+  
+      
   
       // Adding the game information
       content += `<li style="color: ${color};"><strong>${arr[i].opponent}</strong>: ${arr[i].finalScore}`;
