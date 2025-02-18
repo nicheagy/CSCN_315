@@ -3,7 +3,29 @@
 <head>
     <title>Ohio State Season</title>
     <style>
-        body{text-align: center;}
+        body
+        {
+            text-align: center;}
+            .Champs{
+                position: absolute;
+                width: 100px; /* Adjust the size as needed */
+                height: auto;
+            }
+            .Brutus{
+                position: absolute;
+                width: 100px; /* Adjust the size as needed */
+                height: auto;
+            }
+            .left{
+                left: 10px; /* Adjust the position as needed */
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .right{
+                right: 10px; /* Adjust the position as needed */
+                top: 50%;
+                transform: translateY(-50%);
+            }
     </style><!--This is to center the content of the page-->
     <meta name ="viewport" content="width=device-width, initial-scale=1.0"> <!--This is for the start of a responsive page-->
     <link rel="stylesheet" href="styles.css">
@@ -17,7 +39,13 @@
         <a href="ohiostatedata.html">Ohio State Season</a>
     </nav>
 
-  <h1>Ohio State Buckeyes 2024 Season Data</h1>
-  <script src="proj3.js"></script>
+    <img src="nationalChamps.jpg" alt="Champions" class="Champs left">
+    <img src="brutus.jpg" alt="Brutus" class=" Brutus right">
+
+    <div class="ohiostatedata">
+        <h1>Ohio State Buckeyes 2024 Season Data</h1>
+        <script src="proj3.js"></script>
+    </div>
+
 </body>
 </html>

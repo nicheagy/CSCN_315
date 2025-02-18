@@ -1,42 +1,46 @@
-// proj3.js
-
 // Array to manage data
-let data = [
-    { team: "Ohio State", pointsPerGame: 35.7, totalPoints: 571, totalYards: 6870 },
-    { team: "Opponents", pointsPerGame: 12.9, totalPoints: 206, totalYards: 4074 }
+let games = [
+    { opponent: "Akron", finalScore: "6-52", winner: "Ohio State" },
+    { opponent: "Western Michigan", finalScore: "0-56", winner: "Ohio State" },
+    { opponent: "Marshall", finalScore: "14-49", winner: "Ohio State" },
+    { opponent: "Michigan State", finalScore: "7-38", winner: "Ohio State" },
+    { opponent: "Iowa", finalScore: "7-35", winner: "Ohio State" },
+    { opponent: "Oregon", finalScore: "32-31", winner: "Oregon" },
+    { opponent: "Nebraska", finalScore: "17-21", winner: "Ohio State" },
+    { opponent: "Penn State", finalScore: "13-20", winner: "Ohio State" },
+    { opponent: "Purdue", finalScore: "0-45", winner: "Ohio State" },
+    { opponent: "Northwestern", finalScore: "7-31", winner: "Ohio State" },
+    { opponent: "Indiana", finalScore: "15-38", winner: "Ohio State" },
+    { opponent: "Michigan", finalScore: "13-10", winner: "Michigan" },
+    { opponent: "Tennessee", finalScore: "17-42", winner: "Ohio State" },
+    { opponent: "Oregon", finalScore: "21-41", winner: "Ohio State" },
+    { opponent: "Texas", finalScore: "14-28", winner: "Ohio State" },
+    { opponent: "Notre Dame", finalScore: "23-34", winner: "Ohio State" }
   ];
   
   // Function to process data and display relevant messages
   function processData(arr) {
-    // Calculating the average using a for loop
-    let sum = 0;
+    // Creating a div element to display messages
+    const outputDiv = document.createElement('div');
+    outputDiv.style.textAlign = 'center';
+    outputDiv.style.marginTop = '20px';
+    
+    // Generating the rundown of games
+    let content = '<h2>Ohio State Buckeyes 2024 Season Rundown</h2>';
+    content += '<ul style="list-style-type: none;">';
     for (let i = 0; i < arr.length; i++) {
-      sum += arr[i].pointsPerGame;
+      let color = arr[i].winner === "Ohio State" ? 'green' : 'red';
+      content += `<li style="color: ${color};"><strong>${arr[i].opponent}</strong>: ${arr[i].finalScore}</li>`;
+      content += `<br>`; // Adding a line break between games
     }
-    let average = sum / arr.length;
-  
-    // Determining and displaying messages based on conditions
-    if (average > 30) {
-      console.log("The average points per game is quite high: " + average);
-    } else if (average > 20) {
-      console.log("The average points per game is moderate: " + average);
-    } else {
-      console.log("The average points per game is quite low: " + average);
-    }
-  
-    // Using a switch statement to display a message based on the first element
-    switch (arr[0].team) {
-      case "Ohio State":
-        console.log("First team is Ohio State");
-        break;
-      case "Opponents":
-        console.log("First team is Opponents");
-        break;
-      default:
-        console.log("First team is neither Ohio State nor Opponents");
-    }
+    content += '</ul>';
+    
+    // Setting the content to the outputDiv and appending it to the body
+    outputDiv.innerHTML = content;
+    document.body.appendChild(outputDiv);
   }
   
-  // Calling the function to process the data
-  processData(data);
-  
+  // Calling the function to process the data after the DOM content is loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    processData(games);
+  });  
