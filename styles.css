@@ -43,6 +43,12 @@
     font-weight: bold;
 }
 
+.ohiostatedata{
+    color:red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
 /*Tag based Styles*/
 
 body{
