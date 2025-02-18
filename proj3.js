@@ -26,7 +26,7 @@ function processData(arr) {
     outputDiv.style.marginTop = '20px';
   
     // Generating the rundown of games
-    let content = '<h2>Ohio State Buckeyes 2024 Season Rundown</h2>';
+    let content = '';
     content += '<ul style="list-style-type: none;">';
     for (let i = 0; i < arr.length; i++) {
       let color;
