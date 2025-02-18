@@ -17,24 +17,47 @@ let games = [
     { opponent: "Texas", finalScore: "14-28", winner: "Ohio State" },
     { opponent: "Notre Dame", finalScore: "23-34", winner: "Ohio State" }
   ];
-  
-  // Function to process data and display relevant messages
-  function processData(arr) {
+
+// Function to process data and display relevant messages
+function processData(arr) {
     // Creating a div element to display messages
     const outputDiv = document.createElement('div');
     outputDiv.style.textAlign = 'center';
     outputDiv.style.marginTop = '20px';
-    
+  
     // Generating the rundown of games
     let content = '<h2>Ohio State Buckeyes 2024 Season Rundown</h2>';
     content += '<ul style="list-style-type: none;">';
     for (let i = 0; i < arr.length; i++) {
-      let color = arr[i].winner === "Ohio State" ? 'green' : 'red';
-      content += `<li style="color: ${color};"><strong>${arr[i].opponent}</strong>: ${arr[i].finalScore}</li>`;
+      let color;
+      // If statement to determine the color
+      if (arr[i].winner === "Ohio State") {
+        color = 'green';
+      } else {
+        color = 'red';
+      }
+  
+      // Adding the game information
+      content += `<li style="color: ${color};"><strong>${arr[i].opponent}</strong>: ${arr[i].finalScore}`;
+  
+      // Switch statement to display a message based on total points scored
+      let totalPoints = parseInt(arr[i].finalScore.split('-')[0]) + parseInt(arr[i].finalScore.split('-')[1]);
+      switch (true) {
+        case (totalPoints > 50):
+          content += ` (High Scoring Game)</li>`;
+          break;
+        case (totalPoints >= 40 && totalPoints <= 50):
+          content += ` (Moderate Scoring Game)</li>`;
+          break;
+        default:
+          content += ` (Low Scoring Game)</li>`;
+          break;
+      }
+  
       content += `<br>`; // Adding a line break between games
     }
     content += '</ul>';
-    
+  
     // Setting the content to the outputDiv and appending it to the body
     outputDiv.innerHTML = content;
     document.body.appendChild(outputDiv);
@@ -43,4 +66,4 @@ let games = [
   // Calling the function to process the data after the DOM content is loaded
   document.addEventListener('DOMContentLoaded', () => {
     processData(games);
-  });  
+  });
