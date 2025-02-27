@@ -17,22 +17,61 @@
         <a href="ohiostatedata.html">Ohio State Season</a>
     </nav>
 
-    <div class="gettoknowyou">
-        <h1>Let Me Get To Know You</h1>
-        <form id="userData">
-            <label for="first_name">First Name:</label> 
-            <input type="text" id="first_name" name="first_name" placeholder=""><br><br> 
+    <h1>User Registration Form</h1>
 
-            <label for="last_name">Last Name:</label> 
-            <input type="text" id="last_name" name="last_name" placeholder=""><br><br>
-            
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" placeholder=""><br><br>
+    <form id="registrationForm">
+        <!-- Full Name Field -->
+        <label>Full Name: <input type="text" name="fullName" required></label>
+        <span class="error" id="nameError"></span>
 
-            <button type="submit">Submit</button>
-        </form>
-        <div id="results"></div>
-        <script src="proj2.js"></script>
-    </div>
+        <br><br>
+
+        <!-- Username Field -->
+        <label>Username: <input type="text" name="username" required></label>
+        <span class="error" id="usernameError"></span>
+
+        <br><br>
+
+        <!-- Email Field -->
+        <label>Email: <input type="email" name="email" required></label>
+        <span class="error" id="emailError"></span>
+
+        <br><br>
+
+        <!-- Password Field -->
+        <label>Password: <input type="password" name="password" required></label>
+        <span class="error" id="passwordError"></span>
+
+        <br><br>
+
+        <!-- Confirm Password Field -->
+        <label>Confirm Password: <input type="password" name="confirmPassword" required></label>
+        <span class="error" id="confirmPasswordError"></span>
+
+        <br><br>
+
+        <!-- Phone Number Field -->
+        <label>Phone Number: <input type="tel" name="phoneNumber" required></label>
+        <span class="error" id="phoneError"></span>
+
+        <br><br>
+
+        <!-- Date of Birth Field -->
+        <label>Date of Birth: <input type="date" name="dob" required></label>
+        <span class="error" id="dobError"></span>
+
+        <br><br>
+
+        <!-- Terms and Conditions Checkbox -->
+        <label><input type="checkbox" name="terms"> I agree to the terms and conditions</label>
+        <span class="error" id="termsError"></span>
+
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Register</button>
+    </form>
+    
+    <script src="proj6.js"></script>
 </body>
 </html>
