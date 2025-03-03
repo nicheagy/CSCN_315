@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <title>CSCN 315</title> <!--This is the name of the page, you will find it on the tab just above the search bar-->
     <style>
         body{text-align: center;}
         .highlight{color:red;font-weight: bold;}
     </style>
-    <!--Top style is to keep the text on the page centered-->
-    <!--Bottom style is the implement of JavaScript Styling-->
     <meta name ="viewport" content="width=device-width, initial-scale=1.0"> <!--This is for the start of a responsive page-->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -31,10 +28,18 @@
         <p>I am planning on building a website for my brother who has a business called Helm and Port</p>
     </div>
 
+    <!-- Slideshow Lightbox Implementation -->
+    <h2>Click the image to expand</h2>
+    <img src="photo-small.jpg" alt="Thumbnail" class="thumbnail" onclick="openLightbox('photo-large.jpg')">
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Expanded Image">
+    </div>
+    <script src="proj5.js"></script>
+
     <!--This is for the JavaScript Script Tags-->
     <h1 id="example">JavaScript Example</h1>
     <button onclick="showAlert()">Click Me</button>
-
     <script>
         // Use of a variable
         var message = "Welcome to JavaScript!";
