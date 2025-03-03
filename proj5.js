@@ -23,7 +23,7 @@ function addNewImage() {
 
     // Set the click event for the new thumbnail to open the lightbox
     newImage.onclick = function() {
-        openLightbox("photo4-large.jpg"); // Large image for the lightbox
+        openLightbox("Arizona.jpg"); // Large image for the lightbox
     };
 
     // Append the new image to the gallery (or any specific container)
