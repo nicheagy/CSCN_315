@@ -17,7 +17,7 @@ function closeLightbox() {
 // Example of using createElement and appendChild to add new images dynamically
 function addNewImage() {
     const newImage = document.createElement("img");
-    newImage.src = "photo4-small.jpg"; // Source for the new thumbnail
+    newImage.src = "Arizona.jpg"; // Source for the new thumbnail
     newImage.alt = "Thumbnail for Image 4";
     newImage.className = "thumbnail";
 
