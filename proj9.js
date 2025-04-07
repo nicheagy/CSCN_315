@@ -49,8 +49,8 @@ function getCookie(name) {
   // Function to populate the form with preferences (if available)
   function populateForm(prefs) {
     const form = document.getElementById("customizationForm");
-    form.bgColor.value = prefs.bgColor || "#ffffff";
-    form.textColor.value = prefs.textColor || "#000000";
+    form.bgColor.value = prefs.bgColor || "black";
+    form.textColor.value = prefs.textColor || "white";
     form.fontSize.value = prefs.fontSize || "16px";
   }
   
