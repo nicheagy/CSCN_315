@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ohio State Season</title>
+    <title>Customize</title>
     <style>
         body{text-align: center;}
     </style><!--This is to center the content of the page-->
@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <nav class="topnav">                            <!--This is to create a top navigation bar to help split the page into multiple pages or tabs-->
         <a href="index.html">Home</a>
         <a href="introduction.html">Intro</a>
@@ -20,10 +21,26 @@
         <a href="customize.html">Personal Customization</a>
     </nav>
 
-    <div class="ohiostatedata">
-        <h1>Ohio State Buckeyes 2024 Season</h1>
-        <script src="proj3.js"></script>
+    <div class="customize">
+    <h1>Personal Customization</h1>
+  
+    <!-- Customization Form -->
+    <form id="customizationForm">
+      <label>Background Color: <input type="color" name="bgColor"></label><br>
+      <label>Text Color: <input type="color" name="textColor"></label><br>
+      <label>Font Size:
+        <select name="fontSize">
+          <option value="14px">14px</option>
+          <option value="16px">16px</option>
+          <option value="18px">18px</option>
+          <option value="20px">20px</option>
+        </select>
+      </label><br>
+      <button type="submit">Apply</button>
+    </form>
+  
+    <p>This is a sample paragraph to demonstrate your customizations.</p>
+    <script src="proj9.js"></script>
     </div>
-
 </body>
 </html>
