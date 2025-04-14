@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Customize</title>
+    <title>Puzzle Game</title>
     <style>
         body{text-align: center;}
     </style><!--This is to center the content of the page-->
@@ -21,19 +21,21 @@
         <a href="customize.html">Personal Customization</a>
         <a href="game.html">Puzzle Game</a>
     </nav>
-    
-    <div class="game-container">
-        <h1>Image Puzzle Game</h1>
-        <div class="game-info">
-            <div class="timer">Time: <span id="timer">00:00</span></div>
-            <div class="best-time">Best Time: <span id="best-time">--:--</span></div>
-            <button id="reset-btn">Reset</button>
+
+    <div class="main-content">
+        <div class="game-container">
+            <h1>Puzzle Game</h1>
+            <div class="game-info">
+                <div class="timer">Time: <span id="timer">00:00</span></div>
+                <div class="best-time">Best Time: <span id="best-time">--:--</span></div>
+                <button id="reset-btn">Reset</button>
+            </div>
+            <div class="preview">
+                <img src="images/gameImage.jpg" alt="Preview Image" id="preview-image">
+            </div>
+            <div class="puzzle-grid" id="puzzle-grid"></div>
+            <div class="message" id="message"></div>
         </div>
-        <div class="preview">
-            <img src="https://via.placeholder.com/300" alt="Preview Image" id="preview-image">
-        </div>
-        <div class="puzzle-grid" id="puzzle-grid"></div>
-        <div class="message" id="message"></div>
     </div>
     <script src="proj10.js"></script>
 </body>

@@ -63,7 +63,7 @@ function shuffleArray(array) {
 function createPuzzle() {
     puzzleGrid.innerHTML = '';
     pieces = [];
-    const imageUrl = 'https://via.placeholder.com/300';
+    const imageUrl = 'images/gameImage.jpg';
     
     for (let i = 0; i < totalPieces; i++) {
         const piece = document.createElement('div');

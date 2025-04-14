@@ -1,11 +1,19 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margins */
     background-color: #f0f0f0;
+}
+.main-content {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: calc(100vh - 50px); /* Full viewport height minus navbar height */
+    padding-top: 50px; /* Offset for fixed navbar */
+    box-sizing: border-box;
 }
 
 .game-container {
@@ -14,6 +22,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Constrain width for better appearance */
 }
 
 h1 {
