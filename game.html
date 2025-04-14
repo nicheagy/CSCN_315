@@ -6,10 +6,10 @@
         body{text-align: center;}
     </style><!--This is to center the content of the page-->
     <meta name ="viewport" content="width=device-width, initial-scale=1.0"> <!--This is for the start of a responsive page-->
+    <link rel="stylesheet" href="game.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <nav class="topnav">                            <!--This is to create a top navigation bar to help split the page into multiple pages or tabs-->
         <a href="index.html">Home</a>
         <a href="introduction.html">Intro</a>
@@ -21,27 +21,20 @@
         <a href="customize.html">Personal Customization</a>
         <a href="game.html">Puzzle Game</a>
     </nav>
-
-    <div class="customize">
-    <h1>Personal Customization</h1>
-  
-    <!-- Customization Form -->
-    <form id="customizationForm">
-      <label>Background Color: <input type="color" name="bgColor"></label><br>
-      <label>Text Color: <input type="color" name="textColor"></label><br>
-      <label>Font Size:
-        <select name="fontSize">
-          <option value="14px">14px</option>
-          <option value="16px">16px</option>
-          <option value="18px">18px</option>
-          <option value="20px">20px</option>
-        </select>
-      </label><br>
-      <button type="submit">Apply</button>
-    </form>
-  
-    <p>This is a sample paragraph to demonstrate your customizations.</p>
-    <script src="proj9.js"></script>
+    
+    <div class="game-container">
+        <h1>Image Puzzle Game</h1>
+        <div class="game-info">
+            <div class="timer">Time: <span id="timer">00:00</span></div>
+            <div class="best-time">Best Time: <span id="best-time">--:--</span></div>
+            <button id="reset-btn">Reset</button>
+        </div>
+        <div class="preview">
+            <img src="https://via.placeholder.com/300" alt="Preview Image" id="preview-image">
+        </div>
+        <div class="puzzle-grid" id="puzzle-grid"></div>
+        <div class="message" id="message"></div>
     </div>
+    <script src="proj10.js"></script>
 </body>
 </html>
