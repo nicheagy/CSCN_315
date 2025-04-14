@@ -7,6 +7,35 @@ body {
     margin: 0; /* Remove default margins */
     background-color: #f0f0f0;
 }
+.gamenav {
+    background-color: grey;
+    overflow: hidden;
+    position: fixed; /* Fix navbar at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure navbar stays above other content */
+}
+
+.gamenav a {
+    float: left;
+    display: block;
+    color: red;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.gamenav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.gamenav a.active {
+    background-color: red;
+    color: white;
+}
+
 .main-content {
     display: flex;
     justify-content: center; /* Center horizontally */
