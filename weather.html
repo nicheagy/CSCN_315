@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OpenWeather API Display</title>
+    <style>
+        body{text-align: center;}
+    </style><!--This is to center the content of the page-->
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0"> <!--This is for the start of a responsive page-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <nav class="weathernav">                            <!--This is to create a top navigation bar to help split the page into multiple pages or tabs-->
+        <a href="index.html">Home</a>
+        <a href="introduction.html">Intro</a>
+        <a href="contact.html">Contact</a>
+        <a href="gettoknowyou.html">Get To Know You</a>
+        <a href="ohiostatedata.html">Ohio State Season</a>
+        <a href="reviews.html">Customer Reviews</a>
+        <a href="tasks.html">Task Maker</a>
+        <a href="customize.html">Personal Customization</a>
+        <a href="game.html">Puzzle Game</a>
+    </nav>
+    <div class="container">
+        <h1>Current Weather from OpenWeather API</h1>
+        <div id="weather-container" class="weather-grid"></div>
+        <div id="error-message" class="error hidden"></div>
+    </div>
+    <script src="proj11.js"></script>
+</body>
+</html>
