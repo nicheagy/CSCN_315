@@ -102,8 +102,8 @@ button[type="submit"]:hover{
     overflow: hidden;
   }
   
-  /* Style the links inside the navigation bar */
-  .topnav a {
+/* Style the links inside the navigation bar */
+.topnav a {
     float: left;
     display: block;
     color: red;
@@ -111,20 +111,20 @@ button[type="submit"]:hover{
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-  }
+}
   
-  /* Change the color of links on hover */
-  .topnav a:hover {
+/* Change the color of links on hover */
+.topnav a:hover {
     background-color: #ddd;
     color: black;
-  }
+}
   
-  /* Add an active class to highlight the current page */
-  .topnav a.active {
-    background-color: red;
-    color: white;
-  }
-
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: red;
+ color: white;
+}
+ 
 /* Lightbox Styling */
 .thumbnail {
     width: 200px;
